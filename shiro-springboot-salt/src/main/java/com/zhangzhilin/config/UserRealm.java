@@ -55,7 +55,7 @@ public class UserRealm extends AuthorizingRealm {
         //这里表示的是数据库查询
         User user = userService.queryUserByName(username);
         
-        //把数据库的密码和用户登录用的明文密码加密之后的形式进行对比,就是认证过程
+        //把数据库的密码和用户登录用的明文密码加密之后的结果进行对比,进行认证
         
         //第二个参数传的是查询数据库之后的数据库里的密码,而不是用户登录的明文密码
         if (user == null) {
